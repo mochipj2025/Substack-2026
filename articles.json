@@ -1,0 +1,23 @@
+[
+  {
+    "course": "A",
+    "title": "私がサブスタで書き続ける理由",
+    "authorName": "もちスラ",
+    "substackName": "Mochi Substack",
+    "url": "https://note.com/example/n/sample-a-001"
+  },
+  {
+    "course": "B",
+    "title": "今読んでほしい推しサブスタ3選",
+    "authorName": "祭り参加者A",
+    "substackName": "Weekend Letters",
+    "url": "https://note.com/example/n/sample-b-001"
+  },
+  {
+    "course": "C",
+    "title": "noteは広場、サブスタは秘密基地",
+    "authorName": "祭り参加者B",
+    "substackName": "Creator Log",
+    "url": "https://note.com/example/n/sample-c-001"
+  }
+]

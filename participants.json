@@ -1,0 +1,26 @@
+[
+  {
+    "name": "もちスラ",
+    "noteUrl": "https://note.com/example",
+    "substackName": "Mochi Substack",
+    "substackUrl": "https://example.substack.com",
+    "course": "A",
+    "bio": "サブスタの居心地の良さと、書く場所を育てる楽しさを発信しています。"
+  },
+  {
+    "name": "祭り参加者A",
+    "noteUrl": "https://note.com/example-a",
+    "substackName": "Weekend Letters",
+    "substackUrl": "https://example-a.substack.com",
+    "course": "B",
+    "bio": "週末に読みたいニュースレターや、推し記事の紹介を中心に書いています。"
+  },
+  {
+    "name": "祭り参加者B",
+    "noteUrl": "https://note.com/example-b",
+    "substackName": "Creator Log",
+    "substackUrl": "https://example-b.substack.com",
+    "course": "C",
+    "bio": "noteとSubstackを行き来しながら、創作と発信の使い分けを記録しています。"
+  }
+]
