@@ -55,7 +55,40 @@
       </picture>
 
       <div class="mt-4 rounded-lg border-l-8 border-festival bg-white/95 p-5 text-deep shadow-soft sm:p-7">
-        <p class="text-lg font-black leading-relaxed sm:text-xl">【最初の10人募集！】まずは10人で神輿を担ぎます。10人以上集まった場合も、参加してくれた人たちは特設ページでちゃんと紹介します。楽しそうだと思ったら、ぜひこの祭りに参加してください。</p>
+        <p class="text-lg font-black leading-relaxed sm:text-xl">【初日で20投稿突破！】最初の10人募集から始まった神輿が、想像以上に大きくなっています。10人以上集まった場合も、参加してくれた人たちは特設ページでちゃんと紹介します。楽しそうだと思ったら、ぜひこの祭りに参加してください。</p>
+      </div>
+
+      <div class="mt-4 overflow-hidden rounded-lg border border-festival/25 bg-white/95 text-deep shadow-soft">
+        <div class="grid gap-0 lg:grid-cols-[220px_1fr]">
+          <div class="grid place-items-center bg-[#fff4e8] p-6">
+            <div class="relative grid h-40 w-40 place-items-center rounded-full border-8 border-[#f3c17f] bg-deep shadow-soft">
+              <img src="assets/icon.png" alt="" class="h-28 w-28 rounded-full object-cover">
+              <span class="absolute -bottom-3 rounded-full bg-festival px-4 py-1 text-xs font-black text-white">Theme Song</span>
+            </div>
+          </div>
+          <div class="p-5 sm:p-7">
+            <p class="text-sm font-black uppercase text-festivalDark">Music Box</p>
+            <h2 class="mt-1 text-2xl font-black leading-tight">noteをジャックだ！</h2>
+            <p class="mt-2 leading-7 text-slate-600">作戦気分を上げるテーマソングです。再生ボタンを押すと流れます。</p>
+
+            <div class="mt-5 rounded-lg border border-[#eadfd4] bg-[#fffaf4] p-4" data-audio-player>
+              <audio preload="metadata" src="assets/noteをジャックだ！.mp3"></audio>
+              <div class="flex flex-wrap items-center gap-3">
+                <button type="button" class="audio-toggle grid h-12 w-12 place-items-center rounded-full bg-festival text-lg font-black text-white transition hover:bg-festivalDark" aria-label="テーマソングを再生">▶</button>
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-3 text-sm font-bold text-slate-600">
+                    <span>作戦テーマ</span>
+                    <span class="audio-time tabular-nums">0:00 / 0:00</span>
+                  </div>
+                  <input class="audio-seek mt-2 w-full accent-festival" type="range" min="0" max="100" value="0" step="0.1" aria-label="再生位置">
+                </div>
+              </div>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a href="assets/noteをジャックだ！.mp3" download class="inline-flex min-h-10 items-center justify-center rounded-lg bg-deep px-4 py-2 text-sm font-black text-white transition hover:bg-slate-700">MP3をダウンロード</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -84,7 +117,7 @@
       <div class="mt-4 rounded-lg border border-festival/30 bg-[#fff4e8] p-6">
         <p class="text-sm font-black uppercase text-festivalDark">1st Event Week</p>
         <h3 class="mt-2 text-2xl font-black text-deep">第一回 開催期間：2026年6月14日（日）〜6月21日（日）</h3>
-        <p class="mt-3 leading-8 text-slate-700">この1週間、みんなで1投稿でもいいから「サブスタ愛」をnoteに書いてみる。サブスタを使う理由、好きな記事、noteとの使い分け。小さな声を同じ時期に重ねて、「サブスタおもろいよね！」を外へ届けるお祭りです。第一回をきっかけに、次回へつながる継続企画として育てていきます。</p>
+        <p class="mt-3 leading-8 text-slate-700">この1週間、みんなで1投稿でもいいから「サブスタ愛」をnoteに書いてみる。サブスタを使う理由、好きな記事、noteとの使い分け。小さな声を同じ時期に重ねて、「サブスタおもろいよね！」を外へ届けるお祭りです。初日だけで20本以上の記事が集まりました。あと5日あるなら、どうせなら100投稿を目指してみてもいいかもしれません。第一回をきっかけに、次回へつながる継続企画として育てていきます。</p>
       </div>
     </section>
 
@@ -166,9 +199,15 @@
     <section class="mt-6 rounded-lg border border-[#eadfd4] bg-white/95 p-6 shadow-soft sm:p-10" aria-labelledby="library">
       <p class="text-sm font-black uppercase text-festivalDark">Library</p>
       <h2 id="library" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">参加記事ライブラリ</h2>
-      <p class="mt-4 max-w-3xl leading-8 text-slate-600">参加者の記事をコース別にストックします。後から来た読者が、気になる切り口からいつでも読みに行けるライブラリです。</p>
+      <p class="mt-4 max-w-3xl leading-8 text-slate-600">#サブスタ盛り上げ隊 に投稿された記事を、順次ここにストックしていきます。初日だけで20本以上の記事が集まりました。現在、リンクを整理中です。</p>
+      <p class="mt-3 max-w-3xl leading-8 text-slate-600">公開後は、A/B/Cのコース別にあとから読めるライブラリとして更新していきます。</p>
 
-      <div class="mt-8 grid gap-6">
+      <div class="mt-6 rounded-lg border border-dashed border-festival/40 bg-[#fff8ef] p-6 text-center">
+        <p class="text-xl font-black text-deep">参加記事リンクを整理中です</p>
+        <p class="mt-3 leading-8 text-slate-600">水曜の特設ページ公開にあわせて、投稿記事をコース別に追加していきます。</p>
+      </div>
+
+      <div class="mt-8 hidden gap-6" id="article-library-lists">
         <section aria-labelledby="library-a">
           <h3 id="library-a" class="flex items-center gap-3 text-2xl font-black text-deep"><span class="grid h-9 w-9 place-items-center rounded-full bg-festival text-base text-white">A</span>使う理由</h3>
           <div id="articles-course-a" class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
@@ -208,6 +247,26 @@
       </div>
     </section>
 
+    <section class="mt-6 rounded-lg border border-festival/30 bg-[#fff4e8] p-6 shadow-soft sm:p-10" aria-labelledby="voices">
+      <p class="text-sm font-black uppercase text-festivalDark">Voices</p>
+      <h2 id="voices" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">こんな人が参加しています</h2>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <article class="rounded-lg border border-[#eadfd4] bg-white p-5">
+          <p class="text-lg font-black leading-8 text-deep">「これをきっかけに、初めてnoteを書きました」</p>
+        </article>
+        <article class="rounded-lg border border-[#eadfd4] bg-white p-5">
+          <p class="text-lg font-black leading-8 text-deep">「noteを放置していたけど、また書いてみます」</p>
+        </article>
+        <article class="rounded-lg border border-[#eadfd4] bg-white p-5">
+          <p class="text-lg font-black leading-8 text-deep">「サブスタの好きなところを、ちゃんと言葉にしたくなりました」</p>
+        </article>
+      </div>
+      <div class="mt-5 rounded-lg bg-white p-6">
+        <h3 class="text-2xl font-black text-deep">うまい文章より、好きの熱量を</h3>
+        <p class="mt-3 leading-8 text-slate-700">文章がうまいかどうかよりも、Substackのどこが好きか、なぜ続けたいと思ったか、どんな空気が心地いいのかを書いてほしいです。その「好き」が、これから始める人や、もう一度書こうとしている人の活力になります。</p>
+      </div>
+    </section>
+
     <section class="mt-6 rounded-lg border border-[#eadfd4] bg-white/95 p-6 shadow-soft sm:p-10" aria-labelledby="faq">
       <p class="text-sm font-black uppercase text-festivalDark">FAQ</p>
       <h2 id="faq" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">よくある質問</h2>
@@ -240,6 +299,6 @@
     主催：もちスラ
   </footer>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v=20260615-1" defer></script>
 </body>
 </html>

@@ -4,6 +4,9 @@ const courseContainers = {
   C: document.querySelector("#articles-course-c")
 };
 
+const articleLibraryLists = document.querySelector("#article-library-lists");
+const articleLibraryOpenAt = new Date("2026-06-17T00:00:00+09:00");
+
 const emptyMessages = {
   A: "Aコースの記事はこれから追加されます。",
   B: "Bコースの記事はこれから追加されます。",
@@ -66,6 +69,13 @@ function renderArticles(articles) {
 }
 
 async function loadArticles() {
+  if (new Date() < articleLibraryOpenAt) {
+    return;
+  }
+
+  articleLibraryLists.classList.remove("hidden");
+  articleLibraryLists.classList.add("grid");
+
   try {
     const response = await fetch("articles.json", { cache: "no-store" });
     if (!response.ok) {
@@ -106,3 +116,53 @@ function setupParticipantsOpenButton() {
 }
 
 setupParticipantsOpenButton();
+
+const audioPlayer = document.querySelector("[data-audio-player]");
+
+function formatTime(seconds) {
+  if (!Number.isFinite(seconds)) return "0:00";
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${remainingSeconds}`;
+}
+
+function setupAudioPlayer() {
+  if (!audioPlayer) return;
+
+  const audio = audioPlayer.querySelector("audio");
+  const toggle = audioPlayer.querySelector(".audio-toggle");
+  const seek = audioPlayer.querySelector(".audio-seek");
+  const time = audioPlayer.querySelector(".audio-time");
+
+  function updateTime() {
+    seek.value = audio.duration ? String((audio.currentTime / audio.duration) * 100) : "0";
+    time.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+  }
+
+  toggle.addEventListener("click", async () => {
+    if (audio.paused) {
+      await audio.play();
+      toggle.textContent = "Ⅱ";
+      toggle.setAttribute("aria-label", "テーマソングを一時停止");
+    } else {
+      audio.pause();
+      toggle.textContent = "▶";
+      toggle.setAttribute("aria-label", "テーマソングを再生");
+    }
+  });
+
+  seek.addEventListener("input", () => {
+    if (!audio.duration) return;
+    audio.currentTime = (Number(seek.value) / 100) * audio.duration;
+  });
+
+  audio.addEventListener("loadedmetadata", updateTime);
+  audio.addEventListener("timeupdate", updateTime);
+  audio.addEventListener("ended", () => {
+    toggle.textContent = "▶";
+    toggle.setAttribute("aria-label", "テーマソングを再生");
+    updateTime();
+  });
+}
+
+setupAudioPlayer();
