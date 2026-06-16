@@ -40,23 +40,31 @@ function createParticipantCard(participant) {
   const links = document.createElement("div");
   links.className = "mt-6 grid grid-cols-2 gap-3";
 
-  const noteLink = document.createElement("a");
-  noteLink.className = "inline-flex min-h-11 items-center justify-center rounded-lg border border-[#eadfd4] px-4 py-2 text-sm font-black text-deep hover:border-festival hover:text-festivalDark";
-  noteLink.href = participant.noteUrl;
-  noteLink.target = "_blank";
-  noteLink.rel = "noopener noreferrer";
-  noteLink.textContent = "note";
-
-  const substackLink = document.createElement("a");
-  substackLink.className = "inline-flex min-h-11 items-center justify-center rounded-lg bg-festival px-4 py-2 text-sm font-black text-white hover:bg-festivalDark";
-  substackLink.href = participant.substackUrl;
-  substackLink.target = "_blank";
-  substackLink.rel = "noopener noreferrer";
-  substackLink.textContent = "Substack";
+  const noteLink = createExternalLink("note", participant.noteUrl, "border border-[#eadfd4] text-deep hover:border-festival hover:text-festivalDark");
+  const substackLink = createExternalLink("Substack", participant.substackUrl, "bg-festival text-white hover:bg-festivalDark");
 
   links.append(noteLink, substackLink);
   card.append(header, links);
   return card;
+}
+
+function createExternalLink(label, url, className) {
+  const link = document.createElement("a");
+  link.className = `inline-flex min-h-11 items-center justify-center rounded-lg px-4 py-2 text-sm font-black transition ${className}`;
+  link.textContent = label;
+
+  if (url) {
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  } else {
+    link.href = "#";
+    link.setAttribute("aria-disabled", "true");
+    link.className = "inline-flex min-h-11 items-center justify-center rounded-lg border border-[#eadfd4] px-4 py-2 text-sm font-black text-slate-400";
+    link.addEventListener("click", (event) => event.preventDefault());
+  }
+
+  return link;
 }
 
 function getFilteredParticipants() {
@@ -108,11 +116,11 @@ function renderParticipants(participants = getFilteredParticipants()) {
 
 async function loadParticipants() {
   try {
-    const response = await fetch("participants.json", { cache: "no-store" });
-    if (!response.ok) {
+    const participantsResponse = await fetch("participants.json", { cache: "no-store" });
+    if (!participantsResponse.ok) {
       throw new Error("participants.json could not be loaded.");
     }
-    const participants = await response.json();
+    const participants = await participantsResponse.json();
     allParticipants = Array.isArray(participants) ? participants : [];
     renderParticipants();
   } catch (error) {

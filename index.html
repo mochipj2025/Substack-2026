@@ -121,24 +121,35 @@
       </div>
     </section>
 
-    <section class="mt-6 rounded-lg border border-festival/30 bg-[#fff4e8] p-6 shadow-soft sm:p-8" aria-labelledby="participants-link">
-      <div class="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-        <div>
-          <p class="text-sm font-black uppercase text-festivalDark">Members</p>
-          <h2 id="participants-link" class="mt-2 text-2xl font-black leading-tight text-deep sm:text-3xl">参加者紹介ページ</h2>
-          <p class="mt-3 leading-8 text-slate-600">祭りに参加している書き手と、それぞれのSubstackをまとめて見られる名鑑ページです。第一回では、期間の中間にあたる2026年6月17日（水）に公開します。まずは機能実験として、2026年6月17日時点で整理できた8名分から反映しています。</p>
-          <p class="mt-3 rounded-lg bg-white/80 px-4 py-3 font-bold leading-8 text-deep">投稿済みでも、まだ名前が載っていない場合があります。確認できた人から追加していくので、焦らず待っていてください。</p>
+    <section class="mt-6 overflow-hidden rounded-lg border border-deep/15 bg-deep text-white shadow-soft" aria-labelledby="participants-link">
+      <div class="grid gap-0 lg:grid-cols-[1fr_300px]">
+        <div class="p-6 sm:p-8 lg:p-10">
+          <p class="inline-flex rounded-full bg-festival px-3 py-1 text-sm font-black uppercase text-white">Now Open</p>
+          <h2 id="participants-link" class="mt-4 text-3xl font-black leading-tight sm:text-4xl">参加者紹介ページを公開しました</h2>
+          <p class="mt-4 max-w-3xl leading-8 text-white/85">祭りに参加している書き手と、それぞれのSubstackをまとめて見られる名鑑ページです。まずは機能実験として、2026年6月17日時点で整理できた8名分から反映しています。</p>
+          <p class="mt-4 rounded-lg bg-white/10 px-4 py-3 font-bold leading-8 text-white">投稿済みでも、まだ名前が載っていない場合があります。確認できた人から追加していくので、焦らず待っていてください。</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">初回掲載 8名</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">A/B/Cで絞り込み</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">順次アップデート</span>
+          </div>
         </div>
-        <button
-          id="participants-open-button"
-          type="button"
-          data-href="participants.html"
-          data-open-at="2026-06-17T00:00:00+09:00"
-          class="inline-flex min-h-12 items-center justify-center rounded-lg bg-slate-300 px-5 py-3 font-black text-slate-600 transition disabled:cursor-not-allowed disabled:opacity-75"
-          disabled
-        >
-          6月17日（水）公開予定
-        </button>
+        <div class="grid place-items-center bg-[#fff4e8] p-6 text-deep sm:p-8">
+          <div>
+            <img src="assets/icon.png" alt="" class="mx-auto h-28 w-28 rounded-full border-4 border-white object-cover shadow-soft">
+            <button
+              id="participants-open-button"
+              type="button"
+              data-href="participants.html"
+              data-open-at="2026-06-17T00:00:00+09:00"
+              class="mt-5 inline-flex min-h-14 w-full items-center justify-center rounded-lg bg-slate-300 px-6 py-4 text-lg font-black text-slate-600 transition disabled:cursor-not-allowed disabled:opacity-75"
+              disabled
+            >
+              6月17日（水）公開予定
+            </button>
+            <p class="mt-3 text-center text-sm font-bold leading-6 text-slate-600">noteとSubstackのリンクをまとめて見られます。</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -197,35 +208,6 @@
       </div>
     </section>
 
-    <section class="mt-6 rounded-lg border border-[#eadfd4] bg-white/95 p-6 shadow-soft sm:p-10" aria-labelledby="library">
-      <p class="text-sm font-black uppercase text-festivalDark">Library</p>
-      <h2 id="library" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">参加記事ライブラリ</h2>
-      <p class="mt-4 max-w-3xl leading-8 text-slate-600">#サブスタ盛り上げ隊 に投稿された記事を、順次ここにストックしていきます。初日だけで20本以上の記事が集まりました。まずは機能実験として、2026年6月17日時点で整理できた8記事だけを反映しています。</p>
-      <p class="mt-3 max-w-3xl leading-8 text-slate-600">公開後も、A/B/Cのコース別にあとから読めるライブラリとして順次アップデートしていきます。まだ載っていない記事があっても、未掲載なだけなので焦らなくて大丈夫です。</p>
-
-      <div class="mt-6 rounded-lg border border-dashed border-festival/40 bg-[#fff8ef] p-6 text-center">
-        <p class="text-xl font-black text-deep">参加記事リンクを整理中です</p>
-        <p class="mt-3 leading-8 text-slate-600">まずは機能実験として8記事だけ反映しています。投稿はまだ増えているため、掲載は順次アップデートします。</p>
-      </div>
-
-      <div class="mt-8 hidden gap-6" id="article-library-lists">
-        <section aria-labelledby="library-a">
-          <h3 id="library-a" class="flex items-center gap-3 text-2xl font-black text-deep"><span class="grid h-9 w-9 place-items-center rounded-full bg-festival text-base text-white">A</span>使う理由</h3>
-          <div id="articles-course-a" class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
-        </section>
-
-        <section aria-labelledby="library-b">
-          <h3 id="library-b" class="flex items-center gap-3 text-2xl font-black text-deep"><span class="grid h-9 w-9 place-items-center rounded-full bg-festival text-base text-white">B</span>記事紹介</h3>
-          <div id="articles-course-b" class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
-        </section>
-
-        <section aria-labelledby="library-c">
-          <h3 id="library-c" class="flex items-center gap-3 text-2xl font-black text-deep"><span class="grid h-9 w-9 place-items-center rounded-full bg-festival text-base text-white">C</span>使い分け</h3>
-          <div id="articles-course-c" class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
-        </section>
-      </div>
-    </section>
-
     <section class="mt-6 rounded-lg border border-[#eadfd4] bg-white/95 p-6 shadow-soft sm:p-10" aria-labelledby="after-post">
       <p class="text-sm font-black uppercase text-festivalDark">After Posting</p>
       <h2 id="after-post" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">投稿したあとの流れ</h2>
@@ -243,7 +225,7 @@
         <article class="rounded-lg border border-[#eadfd4] bg-white p-5">
           <span class="text-sm font-black text-festivalDark">Step 3</span>
           <h3 class="mt-2 text-xl font-black text-deep">特設ページに掲載</h3>
-          <p class="mt-3 leading-8 text-slate-600">参加記事ライブラリと参加者紹介ページへ順次掲載します。読む人・応援する人の入口にもなります。</p>
+          <p class="mt-3 leading-8 text-slate-600">参加者紹介の特設ページへ順次掲載します。読む人・応援する人の入口にもなります。</p>
         </article>
       </div>
     </section>
@@ -286,7 +268,7 @@
         </details>
         <details class="rounded-lg border border-[#eadfd4] bg-white p-5">
           <summary class="cursor-pointer text-lg font-black text-deep">記事を書いたら何をすればいいですか？</summary>
-          <p class="mt-3 leading-8 text-slate-600">note記事に「#サブスタ盛り上げ隊」をつけて投稿してください。参加記事はコース別にライブラリへストックし、参加者紹介ページでも順次紹介していきます。</p>
+          <p class="mt-3 leading-8 text-slate-600">note記事に「#サブスタ盛り上げ隊」をつけて投稿してください。確認できた記事と参加者は、特設ページで順次紹介していきます。</p>
         </details>
         <details class="rounded-lg border border-[#eadfd4] bg-white p-5">
           <summary class="cursor-pointer text-lg font-black text-deep">記事を書けなくても応援できますか？</summary>
@@ -300,6 +282,6 @@
     主催：もちスラ
   </footer>
 
-  <script src="main.js?v=20260615-1" defer></script>
+  <script src="main.js?v=20260617-1" defer></script>
 </body>
 </html>
