@@ -1,26 +1,66 @@
 [
   {
-    "name": "もちスラ",
-    "noteUrl": "https://note.com/example",
-    "substackName": "Mochi Substack",
-    "substackUrl": "https://example.substack.com",
-    "course": "A",
-    "bio": "サブスタの居心地の良さと、書く場所を育てる楽しさを発信しています。"
-  },
-  {
-    "name": "祭り参加者A",
-    "noteUrl": "https://note.com/example-a",
-    "substackName": "Weekend Letters",
-    "substackUrl": "https://example-a.substack.com",
-    "course": "B",
-    "bio": "週末に読みたいニュースレターや、推し記事の紹介を中心に書いています。"
-  },
-  {
-    "name": "祭り参加者B",
-    "noteUrl": "https://note.com/example-b",
-    "substackName": "Creator Log",
-    "substackUrl": "https://example-b.substack.com",
+    "name": "BMP｜納得設計×AI発信",
+    "noteUrl": "https://note.com/bmp_3c",
+    "substackName": "BMP｜納得設計×AI発信",
+    "substackUrl": "https://substack.com/@bmp3c?utm_source=global-search",
     "course": "C",
-    "bio": "noteとSubstackを行き来しながら、創作と発信の使い分けを記録しています。"
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "GENS",
+    "noteUrl": "https://note.com/craft_works_gens",
+    "substackName": "ゲンズ｜AIと猫で、つくる人。",
+    "substackUrl": "https://substack.com/@gens22",
+    "course": "A",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "どてらい",
+    "noteUrl": "https://note.com/doterai",
+    "substackName": "どてらい | 物書き | 日本漠然研究学会記録官",
+    "substackUrl": "https://substack.com/@doterai?utm_source=global-search",
+    "course": "B",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "mimimiu ｜40代｜暮らし｜子育て｜犬｜",
+    "noteUrl": "https://note.com/mimimiu0409",
+    "substackName": "mimimiu ｜40代｜暮らし｜子育て｜犬｜",
+    "substackUrl": "https://substack.com/@mimimiu0409?utm_source=global-search",
+    "course": "A",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "Noa（のあ）",
+    "noteUrl": "https://note.com/noa_note_jp",
+    "substackName": "Noa（のあ）｜働き方研究室とつくる実験室",
+    "substackUrl": "https://substack.com/@noanote?utm_source=global-search",
+    "course": "C",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "浪速のアナログオジ",
+    "noteUrl": "https://note.com/oji_and_ai128",
+    "substackName": "SHOW0815",
+    "substackUrl": "https://substack.com/@show0815?utm_source=substack-feed-item",
+    "course": "C",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "つきみ(おつきみ)",
+    "noteUrl": "https://note.com/otukimichan_ai",
+    "substackName": "つきみ(おつきみ)",
+    "substackUrl": "https://substack.com/@tukimi",
+    "course": "A",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
+  },
+  {
+    "name": "うらやま太郎@substackを始めましょう。",
+    "noteUrl": "https://note.com/urayamatarou",
+    "substackName": "かめ先生@亀の生態を観察する人",
+    "substackUrl": "https://substack.com/@kamesensei?utm_source=global-search",
+    "course": "A",
+    "bio": "第一回 #サブスタ盛り上げ隊に参加しているクリエイターです。"
   }
 ]

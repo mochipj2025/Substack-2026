@@ -55,8 +55,9 @@
         <div>
           <p class="text-sm font-black uppercase text-festivalDark">Members</p>
           <h1 class="mt-2 text-4xl font-black leading-tight text-deep sm:text-5xl">参加者紹介</h1>
-          <p class="mt-5 max-w-3xl text-lg leading-9 text-slate-600">noteジャック大作戦に参加する書き手と、それぞれが運営するSubstackを紹介します。最初の10人をきっかけに、10人を超えて集まった参加者も順次ここに掲載します。気になる人を見つけたら、noteやSubstackをのぞいてみてください。</p>
+          <p class="mt-5 max-w-3xl text-lg leading-9 text-slate-600">noteジャック大作戦に参加する書き手と、それぞれが運営するSubstackを紹介します。まずは機能実験として、2026年6月17日時点で整理できた8名分から反映しています。その後も順次アップデートします。気になる人を見つけたら、noteやSubstackをのぞいてみてください。</p>
           <p class="mt-4 max-w-3xl rounded-lg bg-[#fff4e8] px-4 py-3 font-bold leading-8 text-deep">フォロワー数に関係なく参加できます。1投稿から、それぞれのサブスタ愛を持ち寄るページです。</p>
+          <p class="mt-3 max-w-3xl rounded-lg border border-festival/25 bg-white px-4 py-3 font-bold leading-8 text-deep">投稿済みでも、まだ名前が載っていない場合があります。確認できた人から追加していくので、焦らず待っていてください。</p>
           <div class="mt-4 grid gap-3 sm:inline-grid">
             <p class="rounded-lg bg-[#fff4e8] px-4 py-3 font-black text-deep">第一回 開催期間：2026年6月14日（日）〜6月21日（日）</p>
             <p class="rounded-lg bg-deep px-4 py-3 font-black text-white">参加者紹介ページ公開：2026年6月17日（水）</p>
@@ -80,15 +81,17 @@
         <div>
           <p class="text-sm font-black uppercase text-festivalDark">Directory</p>
           <h2 id="participants" class="mt-2 text-3xl font-black leading-tight text-deep sm:text-4xl">参加者一覧</h2>
-          <p class="mt-3 leading-8 text-slate-600">紹介カードは `participants.json` から読み込んで表示しています。</p>
+          <p class="mt-3 leading-8 text-slate-600">まずは機能実験として、2026年6月17日時点で整理できた8名分から掲載しています。投稿と確認作業は続いているため、参加者は順次追加されます。</p>
         </div>
-        <div class="flex flex-wrap gap-2" aria-label="参加コース凡例">
-          <span class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark">A 使う理由</span>
-          <span class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark">B 記事紹介</span>
-          <span class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark">C 使い分け</span>
+        <div id="participants-filter" class="flex flex-wrap gap-2" aria-label="参加コースで絞り込み">
+          <button class="rounded-full bg-deep px-3 py-2 text-sm font-black text-white" type="button" data-course-filter="all" aria-pressed="true">すべて</button>
+          <button class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark transition hover:bg-[#ffe3c2]" type="button" data-course-filter="A" aria-pressed="false">A 使う理由</button>
+          <button class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark transition hover:bg-[#ffe3c2]" type="button" data-course-filter="B" aria-pressed="false">B 記事紹介</button>
+          <button class="rounded-full bg-[#fff4e8] px-3 py-2 text-sm font-black text-festivalDark transition hover:bg-[#ffe3c2]" type="button" data-course-filter="C" aria-pressed="false">C 使い分け</button>
         </div>
       </div>
 
+      <p id="participants-filter-status" class="mt-5 rounded-lg bg-[#fff4e8] px-4 py-3 text-sm font-bold text-deep" aria-live="polite"></p>
       <div id="participants-list" class="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
     </section>
   </main>
@@ -97,6 +100,6 @@
     主催：もちスラ
   </footer>
 
-  <script src="participants.js?v=20260615-1" defer></script>
+  <script src="participants.js?v=20260617-1" defer></script>
 </body>
 </html>
