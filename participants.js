@@ -22,7 +22,7 @@ const filterLabels = {
 
 function createParticipantCard(participant) {
   const card = document.createElement("article");
-  card.className = "flex min-h-64 flex-col justify-between rounded-lg border border-[#eadfd4] bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md";
+  card.className = "flex min-h-56 flex-col justify-between rounded-lg border border-[#eadfd4] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:min-h-64 sm:p-6";
 
   const header = document.createElement("div");
   header.innerHTML = `
@@ -33,12 +33,12 @@ function createParticipantCard(participant) {
       </div>
       <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-festival text-lg font-black text-white">${participant.course}</span>
     </div>
-    <p class="mt-4 leading-8 text-slate-600">${participant.bio}</p>
-    <p class="mt-4 rounded-lg bg-[#fff4e8] px-4 py-3 font-bold text-deep">${participant.substackName}</p>
+    <p class="mt-3 text-sm leading-7 text-slate-600 sm:mt-4 sm:text-base sm:leading-8">${participant.bio}</p>
+    <p class="mt-4 rounded-lg bg-[#fff4e8] px-4 py-3 text-sm font-bold leading-6 text-deep sm:text-base">${participant.substackName}</p>
   `;
 
   const links = document.createElement("div");
-  links.className = "mt-6 grid grid-cols-2 gap-3";
+  links.className = "mt-5 grid grid-cols-2 gap-3 sm:mt-6";
 
   const noteLink = createExternalLink("note", participant.noteUrl, "border border-[#eadfd4] text-deep hover:border-festival hover:text-festivalDark");
   const substackLink = createExternalLink("Substack", participant.substackUrl, "bg-festival text-white hover:bg-festivalDark");

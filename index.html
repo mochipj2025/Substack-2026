@@ -39,9 +39,45 @@
       }
     };
   </script>
+  <style>
+    @media (max-width: 640px) {
+      main section {
+        padding: 1.25rem !important;
+      }
+
+      main h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+      }
+
+      main h3 {
+        font-size: 1.125rem !important;
+        line-height: 1.45 !important;
+      }
+
+      main p,
+      main li,
+      main summary {
+        font-size: 0.9375rem !important;
+        line-height: 1.75 !important;
+      }
+
+      main .text-lg,
+      main .text-xl {
+        font-size: 1rem !important;
+        line-height: 1.75 !important;
+      }
+
+      main .text-4xl,
+      main .text-6xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+      }
+    }
+  </style>
 </head>
 <body class="bg-base font-sans text-ink antialiased">
-  <header class="relative overflow-hidden bg-gradient-to-b from-[#fff3df] to-base px-4 pb-14 pt-7 sm:px-6">
+  <header class="relative overflow-hidden bg-gradient-to-b from-[#fff3df] to-base px-4 pb-8 pt-5 sm:px-6 sm:pb-14 sm:pt-7">
     <div class="mx-auto max-w-6xl">
       <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-festival/25 bg-white/85 px-3 py-2 text-sm font-bold text-deep shadow-sm">
         <img src="assets/icon.png" alt="" class="h-6 w-6 rounded-full object-cover">
@@ -51,43 +87,39 @@
       <h1 class="sr-only">noteジャック大作戦 〜サブスタ盛り上げ隊を起こそう〜</h1>
       <picture>
         <source media="(max-width: 640px)" srcset="assets/hero-mobile.png">
-        <img src="assets/hero.png" alt="noteジャック大作戦、サブスタ盛り上げ隊。もちスラと参加者が神輿を担ぐヒーロー画像" class="w-full rounded-lg border border-festival/20 shadow-soft">
+        <img src="assets/hero.png" alt="noteジャック大作戦、サブスタ盛り上げ隊。もちスラと参加者が神輿を担ぐヒーロー画像" class="max-h-[58vh] w-full rounded-lg border border-festival/20 object-cover object-top shadow-soft sm:max-h-none">
       </picture>
 
-      <div class="mt-4 rounded-lg border-l-8 border-festival bg-white/95 p-5 text-deep shadow-soft sm:p-7">
-        <p class="text-lg font-black leading-relaxed sm:text-xl">【初日で20投稿突破！】最初の10人募集から始まった神輿が、想像以上に大きくなっています。10人以上集まった場合も、参加してくれた人たちは特設ページでちゃんと紹介します。楽しそうだと思ったら、ぜひこの祭りに参加してください。</p>
+      <div class="mt-3 rounded-lg border-l-4 border-festival bg-white p-4 shadow-soft sm:mt-4 sm:border-l-8 sm:p-7" style="background-color:#fff;color:#1f2d3a;">
+        <p class="text-base font-black leading-8 sm:hidden" style="color:#1f2d3a;">【初日で20投稿突破！】参加者は特設ページで順次紹介します。</p>
+        <p class="hidden text-xl font-black leading-relaxed sm:block" style="color:#1f2d3a;">【初日で20投稿突破！】最初の10人募集から始まった神輿が、想像以上に大きくなっています。参加してくれた人たちは特設ページで順次紹介します。</p>
+        <a href="participants.html" class="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-festival px-5 py-3 text-base font-black text-white shadow-sm transition hover:bg-festivalDark sm:hidden">特設ページを見る</a>
       </div>
 
-      <div class="mt-4 overflow-hidden rounded-lg border border-festival/25 bg-white/95 text-deep shadow-soft">
-        <div class="grid gap-0 lg:grid-cols-[220px_1fr]">
-          <div class="grid place-items-center bg-[#fff4e8] p-6">
-            <div class="relative grid h-40 w-40 place-items-center rounded-full border-8 border-[#f3c17f] bg-deep shadow-soft">
-              <img src="assets/icon.png" alt="" class="h-28 w-28 rounded-full object-cover">
-              <span class="absolute -bottom-3 rounded-full bg-festival px-4 py-1 text-xs font-black text-white">Theme Song</span>
+      <div class="mt-4 rounded-lg border border-festival/25 bg-white/95 p-4 text-deep shadow-soft sm:p-6">
+        <div class="rounded-lg border border-[#eadfd4] bg-[#fffaf4] p-4" data-audio-player>
+          <audio preload="metadata" src="assets/noteをジャックだ！.mp3"></audio>
+          <div class="flex items-center gap-4">
+            <img src="assets/icon.png" alt="" class="h-14 w-14 shrink-0 rounded-lg border border-festival/20 object-cover sm:h-16 sm:w-16">
+            <div class="min-w-0 flex-1">
+              <p class="text-xs font-black uppercase text-festivalDark">Music Box</p>
+              <h2 class="truncate text-lg font-black leading-tight sm:text-2xl">noteをジャックだ！</h2>
+              <p class="mt-1 text-sm font-bold leading-6 text-slate-600">作戦テーマソング</p>
             </div>
+            <button type="button" class="audio-toggle grid h-12 w-12 shrink-0 place-items-center rounded-full bg-festival text-lg font-black text-white shadow-sm transition hover:bg-festivalDark" aria-label="テーマソングを再生">▶</button>
           </div>
-          <div class="p-5 sm:p-7">
-            <p class="text-sm font-black uppercase text-festivalDark">Music Box</p>
-            <h2 class="mt-1 text-2xl font-black leading-tight">noteをジャックだ！</h2>
-            <p class="mt-2 leading-7 text-slate-600">作戦気分を上げるテーマソングです。再生ボタンを押すと流れます。</p>
 
-            <div class="mt-5 rounded-lg border border-[#eadfd4] bg-[#fffaf4] p-4" data-audio-player>
-              <audio preload="metadata" src="assets/noteをジャックだ！.mp3"></audio>
-              <div class="flex flex-wrap items-center gap-3">
-                <button type="button" class="audio-toggle grid h-12 w-12 place-items-center rounded-full bg-festival text-lg font-black text-white transition hover:bg-festivalDark" aria-label="テーマソングを再生">▶</button>
-                <div class="min-w-0 flex-1">
-                  <div class="flex items-center justify-between gap-3 text-sm font-bold text-slate-600">
-                    <span>作戦テーマ</span>
-                    <span class="audio-time tabular-nums">0:00 / 0:00</span>
-                  </div>
-                  <input class="audio-seek mt-2 w-full accent-festival" type="range" min="0" max="100" value="0" step="0.1" aria-label="再生位置">
-                </div>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-3">
-                <a href="assets/noteをジャックだ！.mp3" download class="inline-flex min-h-10 items-center justify-center rounded-lg bg-deep px-4 py-2 text-sm font-black text-white transition hover:bg-slate-700">MP3をダウンロード</a>
-              </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between gap-3 text-xs font-bold text-slate-600">
+              <span>再生位置</span>
+              <span class="audio-time tabular-nums">0:00 / 0:00</span>
             </div>
+            <input class="audio-seek mt-2 w-full accent-festival" type="range" min="0" max="100" value="0" step="0.1" aria-label="再生位置">
           </div>
+
+          <a href="assets/noteをジャックだ！.mp3" download class="mt-3 inline-flex text-sm font-black text-deep underline decoration-festival/40 underline-offset-4 hover:text-festivalDark">MP3をダウンロード</a>
+        </div>
+      </div>
         </div>
       </div>
     </div>
@@ -117,7 +149,8 @@
       <div class="mt-4 rounded-lg border border-festival/30 bg-[#fff4e8] p-6">
         <p class="text-sm font-black uppercase text-festivalDark">1st Event Week</p>
         <h3 class="mt-2 text-2xl font-black text-deep">第一回 開催期間：2026年6月14日（日）〜6月21日（日）</h3>
-        <p class="mt-3 leading-8 text-slate-700">この1週間、みんなで1投稿でもいいから「サブスタ愛」をnoteに書いてみる。サブスタを使う理由、好きな記事、noteとの使い分け。小さな声を同じ時期に重ねて、「サブスタおもろいよね！」を外へ届けるお祭りです。初日だけで20本以上の記事が集まりました。あと5日あるなら、どうせなら100投稿を目指してみてもいいかもしれません。第一回をきっかけに、次回へつながる継続企画として育てていきます。</p>
+        <p class="mt-3 leading-8 text-slate-700 sm:hidden">この1週間、1投稿でもいいから「サブスタ愛」をnoteに書いてみるお祭りです。第一回をきっかけに、次回へつながる継続企画として育てていきます。</p>
+        <p class="mt-3 hidden leading-8 text-slate-700 sm:block">この1週間、みんなで1投稿でもいいから「サブスタ愛」をnoteに書いてみる。サブスタを使う理由、好きな記事、noteとの使い分け。小さな声を同じ時期に重ねて、「サブスタおもろいよね！」を外へ届けるお祭りです。初日だけで20本以上の記事が集まりました。あと5日あるなら、どうせなら100投稿を目指してみてもいいかもしれません。第一回をきっかけに、次回へつながる継続企画として育てていきます。</p>
       </div>
     </section>
 
@@ -126,10 +159,10 @@
         <div class="p-6 sm:p-8 lg:p-10">
           <p class="inline-flex rounded-full bg-festival px-3 py-1 text-sm font-black uppercase text-white">Now Open</p>
           <h2 id="participants-link" class="mt-4 text-3xl font-black leading-tight sm:text-4xl">参加者紹介ページを公開しました</h2>
-          <p class="mt-4 max-w-3xl leading-8 text-white/85">祭りに参加している書き手と、それぞれのSubstackをまとめて見られる名鑑ページです。まずは機能実験として、2026年6月17日時点で整理できた8名分から反映しています。</p>
+          <p class="mt-4 max-w-3xl leading-8 text-white/85">祭りに参加している書き手と、それぞれのSubstackをまとめて見られる名鑑ページです。2026年6月18日時点で整理できた28名分から反映しています。</p>
           <p class="mt-4 rounded-lg bg-white/10 px-4 py-3 font-bold leading-8 text-white">投稿済みでも、まだ名前が載っていない場合があります。確認できた人から追加していくので、焦らず待っていてください。</p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">初回掲載 8名</span>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">掲載 28名</span>
             <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">A/B/Cで絞り込み</span>
             <span class="rounded-full bg-white px-4 py-2 text-sm font-black text-deep">順次アップデート</span>
           </div>
