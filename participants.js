@@ -60,7 +60,7 @@ function createExternalLink(label, url, className) {
   } else {
     link.href = "#";
     link.setAttribute("aria-disabled", "true");
-    link.className = "inline-flex min-h-11 items-center justify-center rounded-lg border border-[#eadfd4] px-4 py-2 text-sm font-black text-slate-400";
+    link.className = "inline-flex min-h-11 items-center justify-center rounded-lg border border-[#d8cabc] bg-[#f7f2ec] px-4 py-2 text-sm font-black text-slate-600";
     link.addEventListener("click", (event) => event.preventDefault());
   }
 
