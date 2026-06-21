@@ -857,16 +857,16 @@ function buildIconImagePrompt(animal, elementId, numerology, zodiac, blood) {
     "Create a square 1:1 SNS profile icon.",
     "",
     "Use the attached image as the main reference.",
-    `Turn the person in the reference image into a cute 32-bit pixel art avatar wearing a ${animal.nameJa} kigurumi hoodie.`,
+    `Turn the person in the reference image into a cute 32-bit pixel art avatar wearing a clearly visible full ${animal.nameJa} kigurumi onesie, not ordinary clothes.`,
     "",
     "Keep the person's broad identity cues from the reference image: hairstyle, face impression, expression, glasses or accessories, and color mood.",
     "",
-    "Kigurumi design: soft animal hood, small ears, cozy costume, subtle tail or paw detail. Keep the face human-avatar-like, not a full animal face.",
+    "Kigurumi design: oversized animal hood covering the head, visible animal ears on the hood, cozy one-piece suit, paw mittens, round belly shape, and a small tail detail. Keep the face human-avatar-like inside the hood, not a full animal face.",
     "",
-    "Style: clean 32-bit pixel art, cute, friendly, centered face and upper body, readable at small icon size.",
+    "Style: clean 32-bit pixel art, cute, friendly, centered face and upper body, readable at small icon size. The costume must be obvious even at icon size.",
     `Background: simple soft circular background using ${element.ja} element color as a subtle accent.`,
     "",
-    "No text, no letters, no numbers, no watermark, no logo.",
+    "Avoid: normal human girl portrait, casual fashion outfit, plain hoodie, realistic photo style, text, letters, numbers, watermark, logo.",
     "1:1 aspect ratio."
   ].join("\n");
 }
