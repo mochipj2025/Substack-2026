@@ -1,0 +1,52 @@
+name: 占い本格化タスク
+description: ケツ印どうぶつ診断の占いロジック、結果文、共有体験を改善するタスク
+title: "[Fortune] "
+labels:
+  - fortune
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 分類
+      options:
+        - fortune-logic
+        - reading-data
+        - result-page
+        - sharing
+        - qa
+        - docs
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的
+      description: このタスクで何を良くしたいかを書く
+      placeholder: 結果ページの最初の10秒で「当たってそう」と感じる状態にしたい
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: やること
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      value: |
+        - [ ] ローカルで確認した
+        - [ ] GitHub Pagesで確認した
+        - [ ] スマホ幅で確認した
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: メモ
+      description: 参照元、考え方、迷っていること
